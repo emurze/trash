@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}s
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <input type="hidden" name="reset" value="True">
+        {% csrf_token %}
+        <input type="submit" value="reset" class="with_cursor" />
+    </form>
+    <form method="POST">
+        {% for item in terminal_form %}
+            {{ item }}<span style="display: inline-block; margin-left: 15px;">{{ path }}</span>
+        {% endfor %}
+        {% if response %}
+            {{ response | linebreaks }}
+        {% endif %}
+        {% csrf_token %}
+        <input style="display: none;" type="submit" value="execute" />
+    </form>
+{% endblock %}
