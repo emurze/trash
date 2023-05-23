@@ -10,6 +10,8 @@
         </ol>
     </p>
     <br>
+    <p>Use <code>py</code> instead of <code>python</code></p>
+    <code>chcp 65001</code> 
     <p>Use this [ http:// { IP } : { PORT  } /apple/commands/ ]</p>
     [ http://192.168.100.8:8000/apple/commands/ ]
 </h4>
